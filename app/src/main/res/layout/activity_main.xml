@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#E4325598">
+
+
+    <!--    <Button-->
+<!--        android:id="@+id/circle_1"-->
+<!--        android:layout_width="274dp"-->
+<!--        android:layout_height="273dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="61dp"-->
+<!--        android:layout_marginBottom="353dp"-->
+<!--        android:drawableBottom="@drawable/circle" />-->
+
+    <!--    <Button-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:drawableBottom="@drawable/circle_2"/>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginEnd="-188dp"
+        android:layout_marginBottom="30dp">
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="412dp"
+            android:layout_height="500dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="108dp"
+            android:foregroundGravity="center"
+            app:cpb_background_progressbar_color="#6750A3"
+            app:cpb_background_progressbar_width="20dp"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressBar"
+            tools:ignore="MissingConstraints"
+            android:text="00:00:00"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="133dp"
+        android:foreground="@drawable/circle2"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="134dp"
+        android:foreground="@drawable/circle_refresh"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="390dp"
+        android:layout_marginRight="-247dp"
+        android:layout_marginBottom="134dp"
+        android:layout_toRightOf="@+id/button2"
+        android:foreground="@drawable/circle_pause"
+      />
+
+
+</RelativeLayout>
